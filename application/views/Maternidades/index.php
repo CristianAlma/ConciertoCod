@@ -4,13 +4,13 @@
         <div class="col-md-4">
             <h3 class="text-center">Registrar Maternidades</h3>
             <form action="<?php echo  site_url('Maternidades/guardar'); ?>" id="frm_registrar_maternidad" method="post">
-                <label for=""><b>NOMBRE:</b></label>
+                <label for=""><b>NAME:</b></label>
                 <input type="text" name="nombre_mat" id="nombre_mat"
                 placeholder="Ingrese el nombre de la maternidad" class="form-control"><br>
-                <label for=""><b>PROVINCIA:</b></label>
+                <label for=""><b>BIOGRAPHY:</b></label>
                 <input type="text" name="provincia_mat" id="provincia_mat"
                 placeholder="Ingrese el nombre de la provincia" class="form-control"><br>
-                <label for=""><b>CIUDAD:</b></label>
+                <label for=""><b>CITY:</b></label>
                 <input type="text" name="ciudad_mat" id="ciudad_mat"
                 placeholder="Ingrese la ciudad" class="form-control"><br>
                 <label for=""><b>DIRECCIÓN:</b></label>
