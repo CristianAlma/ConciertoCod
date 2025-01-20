@@ -30,8 +30,7 @@
                 'dni_doc_ca'=>$this->input->post('dni_doc_ca'),
                 'apellido_doc_ca'=>$this->input->post('apellido_doc_ca'),
                 'nombre_doc_ca'=>$this->input->post('nombre_doc_ca'),
-                'latitud_doc_ca'=>$this->input->post('latitud_doc_ca'),
-                'longitud_doc_ca'=>$this->input->post('longitud_doc_ca')
+                
             );
             //print_r($datos);
             $this->Doctor->insertar($datos);

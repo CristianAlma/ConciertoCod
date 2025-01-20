@@ -40,26 +40,3 @@
     </div>
 </div>
 
-<script>
-    
-    function initMap() {
-        var coordenadaCentral = new google.maps.LatLng(-0.9178980695302612, -78.63296437278657);
-        var mapa = new google.maps.Map(
-            document.getElementById('mapa-direcciones-generales'),
-            {
-                center: coordenadaCentral,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-        );
-
-        <?php foreach ($doctores as $doctorTemporal): ?>
-        var marcador = new google.maps.Marker({
-            position: new google.maps.LatLng(<?php echo $doctorTemporal->latitud_doc_ca; ?>, <?php echo $doctorTemporal->longitud_doc_ca; ?>),
-            map: mapa,
-            title: '<?php echo $doctorTemporal->nombre_doc_ca; ?>',
-        });
-        <?php endforeach; ?>
-    }
-</script>
-

@@ -36,12 +36,7 @@
             }
         }
         
-        //Consultar los datos de las clinicas
-        public function visualizarDoctores() {
-			$this->db->select('latitud_doc_ca, longitud_doc_ca, nombre_doc_ca, id_doc_ca');
-			$consulta = $this->db->get('doctor');
-			return $consulta->result();
-		}
+   
 
     }//Cierre de la clase
 

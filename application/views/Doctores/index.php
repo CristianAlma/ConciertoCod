@@ -8,9 +8,9 @@
                 <label for=""><b>Especialidad:</b></label>
                 <select name="especialidad_doc_ca" id="especialidad_doc_ca" class="form-control" required>
                     <option value="">--SELECCIONE--</option>
-                    <option value="GENERAL">LOCOS</option>
-                    <option value="ODONTOLOGIA">LOS TRISTES</option>
-                    <option value="PEDIATRA">LOS JOYAS</option>
+                    <option value="GENERAL">GENERAL</option>
+                    <option value="ODONTOLOGIA">ODONTOLOGIA</option>
+                    <option value="PEDIATRA">PEDIATRA</option>
                 </select>
 
                 
@@ -24,15 +24,11 @@
                 <input type="text" name="nombre_doc_ca" id="nombre_doc_ca"
                 placeholder="Ingrese su primer nombre" class="form-control"><br>
 
-                <input type="text" name="latitud_doc_ca" id="latitud_doc_ca"
-                placeholder="Seleccione la ubicación en el mapa" class="form-control" readonly><br>
-                <input type="text" name="longitud_doc_ca" id="longitud_doc_ca"
-                placeholder="Seleccione la ubicación en el mapa" class="form-control" readonly><br>
-                <div id="mapa-direccion" style="border: 1px solid black; width:100%;height:250px"></div>
+                
                 <br>
-                <button class="btn btn-success" type="submit">GUARDAR</button>
+                <button class="btn btn-success" type="submit">SAVE</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-danger" type="reset">CANCELAR</button>
+                <button class="btn btn-danger" type="reset">CANCELL</button>
             </form>
         </div>
         <div class="col-md-8">
@@ -64,7 +60,7 @@
                             <td class="text-center"><?php echo $doctorTemporal->apellido_doc_ca; ?></td>
                             <td class="text-center"><?php echo $doctorTemporal->nombre_doc_ca; ?></td>
                             <td class="text-center">
-                            <a href="<?php echo site_url('Doctores/graficarDireccion'); ?>/<?php echo $doctorTemporal->id_doc_ca; ?>" class="btn btn-primary" target="_blank">Ver Dirección</a>
+                            
                                 <a href="#" class="btn btn-warning">Editar</a>
                                 <a href="<?php echo site_url('Doctores/eliminar'); ?>/<?php echo $doctorTemporal->id_doc_ca; ?>" class="btn btn-danger" onclick="return confirm('Esta seguro?');">Eliminar</a>
                             </td>
@@ -88,37 +84,3 @@
 
 <br><br>
 
-<script>
-    function initMap(){
-        var coordenadaCentral=new google.maps.LatLng(-0.15949984853868873, -78.492520003779);
-        var mapa1= new google.maps.Map(
-            document.getElementById('mapa-direccion'),
-            {
-                center: coordenadaCentral,
-                zoom: 10,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            }
-        );
-
-        var marcardor=new google.maps.Marker({
-            position:coordenadaCentral,
-            map:mapa1,
-            tittle:'Seleccione la dirección',
-            draggable:true
-        });
-
-        google.maps.event.addListener(
-            marcardor,
-            'dragend',
-            function(event){
-                var latitud = this.getPosition().lat();
-                var longitud = this.getPosition().lng();
-                //alert(latitud + "---- " + longitud)//Prueba
-                document.getElementById('latitud_doc_ca').value=latitud;
-                document.getElementById('longitud_doc_ca').value=longitud;
-
-            }
-        );
-
-    }
-</script>
