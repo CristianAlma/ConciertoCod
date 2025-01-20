@@ -14,8 +14,7 @@
                 placeholder="Enter your phone" class="form-control"><br>
                 <label for=""><b>PHONE:</b></label>
                 <input type="text" name="ciudad_hos" id="ciudad_hos"
-                placeholder="Ingrese la ciudad" class="form-control"><br>
-            
+                placeholder="Ingrese la ciudad" class="form-control"><br>         
                 
                 <br>
                 <button class="btn btn-success" type="submit">SAVE</button>

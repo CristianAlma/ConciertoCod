@@ -35,7 +35,6 @@
                 return false; //Cuando no existen clientes registrados
             }
         }
-        
 
     }//Cierre de la clase
 
