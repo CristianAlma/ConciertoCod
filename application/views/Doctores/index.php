@@ -8,9 +8,9 @@
                 <label for=""><b>Especialidad:</b></label>
                 <select name="especialidad_doc_ca" id="especialidad_doc_ca" class="form-control" required>
                     <option value="">--SELECCIONE--</option>
-                    <option value="GENERAL">GENERAL</option>
-                    <option value="ODONTOLOGIA">ODONTOLOGIA</option>
-                    <option value="PEDIATRA">PEDIATRA</option>
+                    <option value="GENERAL">LOCOS</option>
+                    <option value="ODONTOLOGIA">LOS TRISTES</option>
+                    <option value="PEDIATRA">LOS JOYAS</option>
                 </select>
 
                 

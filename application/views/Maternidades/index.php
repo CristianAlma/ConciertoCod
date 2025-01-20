@@ -2,7 +2,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h3 class="text-center">Registrar Maternidades</h3>
+            <h3 class="text-center">Register Composer
+            </h3>
             <form action="<?php echo  site_url('Maternidades/guardar'); ?>" id="frm_registrar_maternidad" method="post">
                 <label for=""><b>NAME:</b></label>
                 <input type="text" name="nombre_mat" id="nombre_mat"
@@ -23,7 +24,8 @@
             </form>
         </div>
         <div class="col-md-8">
-            <h3  class="text-center">Listado de Maternidades</h3>
+            <h3  class="text-center">List of Composers
+            </h3>
             <br>
             <!--Boton ver direcciones-->
             

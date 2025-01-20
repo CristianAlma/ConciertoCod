@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="text-center">Direcciones Generales de Maternidades</h3>
+            <h3 class="text-center"></h3>
             <br>
             <?php if ($maternidades): ?>
             <table class="table table-bordered table-striped table-hover" id="tbl-direcciones-generales">
@@ -25,17 +25,13 @@
                 </tbody>
             </table>
             <?php else: ?>
-            <h3 style="color:red;">No existen maternidades registradas</h3>
+            <h3 style="color:red;">There are no registered maternities
+            </h3>
             <?php endif; ?>
         </div>
     </div>
     <br><br>
-    <div class="row">
-        <div class="col-md-12">
-            <h3 class="text-center">Mapa de Direcciones Generales</h3>
-            <div id="mapa-direcciones-generales" style="border: 1px solid black; width:100%;height:400px"></div>
-        </div>
-    </div>
+    
 </div>
 
 
