@@ -15,9 +15,7 @@
                 <label for=""><b>PHONE:</b></label>
                 <input type="text" name="ciudad_hos" id="ciudad_hos"
                 placeholder="Ingrese la ciudad" class="form-control"><br>
-                
-                
-
+            
                 
                 <br>
                 <button class="btn btn-success" type="submit">SAVE</button>
