@@ -29,8 +29,7 @@
                 'provincia_mat'=>$this->input->post('provincia_mat'),
                 'ciudad_mat'=>$this->input->post('ciudad_mat'),
                 'direccion_mat'=>$this->input->post('direccion_mat'),
-                'latitud_mat'=>$this->input->post('latitud_mat'),
-                'longitud_mat'=>$this->input->post('longitud_mat')
+                
             );
             //print_r($datos);
             $this->Maternidad->insertar($datos);

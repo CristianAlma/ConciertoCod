@@ -35,13 +35,7 @@
                 return false; //Cuando no existen clientes registrados
             }
         }
-         //Consultar los datos de las clinicas
-         public function visualizarMaternidades() {
-			$this->db->select('latitud_mat, longitud_mat, nombre_mat,id_mat');
-			$consulta = $this->db->get('maternidad');
-			return $consulta->result();
-		}
-
+        
 
 
     }//Cierre de la clase

@@ -33,9 +33,9 @@
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
-                        <th class="text-center">NOMBRE</th>
-                        <th class="text-center">PROVINCIA</th>
-                        <th class="text-center">CIUDAD</th>
+                        <th class="text-center">NAME</th>
+                        <th class="text-center">BIOGRAPHY:</th>
+                        <th class="text-center">CITY</th>
                         <th class="text-center">ACCIONES</th>
                 
                     </tr>
@@ -72,38 +72,3 @@
 
 <br><br>
 
-<script>
-    function initMap(){
-        var coordenadaCentral=new google.maps.LatLng(-2.197933792944073, -79.88841023449181);
-        var mapa1= new google.maps.Map(
-            document.getElementById('mapa-direccion'),
-            {
-                center: coordenadaCentral,
-                zoom: 10,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            }
-        );
-
-        var marcardor=new google.maps.Marker({
-            position:coordenadaCentral,
-            map:mapa1,
-            tittle:'Seleccione la dirección',
-            draggable:true,
-            icon: '<?php echo base_url("assets/img/mater.png"); ?>'
-        });
-
-        google.maps.event.addListener(
-            marcardor,
-            'dragend',
-            function(event){
-                var latitud = this.getPosition().lat();
-                var longitud = this.getPosition().lng();
-                //alert(latitud + "---- " + longitud)//Prueba
-                document.getElementById('latitud_mat').value=latitud;
-                document.getElementById('longitud_mat').value=longitud;
-
-            }
-        );
-
-    }
-</script>

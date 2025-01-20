@@ -38,26 +38,5 @@
     </div>
 </div>
 
-<script>
-    
-    function initMap() {
-        var coordenadaCentral = new google.maps.LatLng(-0.9178980695302612, -78.63296437278657);
-        var mapa = new google.maps.Map(
-            document.getElementById('mapa-direcciones-generales'),
-            {
-                center: coordenadaCentral,
-                zoom: 10,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-        );
 
-        <?php foreach ($maternidades as $maternidadTemporal): ?>
-        var marcador = new google.maps.Marker({
-            position: new google.maps.LatLng(<?php echo $maternidadTemporal->latitud_mat; ?>, <?php echo $maternidadTemporal->longitud_mat; ?>),
-            map: mapa,
-            title: '<?php echo $maternidadTemporal->nombre_mat; ?>',
-        });
-        <?php endforeach; ?>
-    }
-</script>
 
