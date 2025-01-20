@@ -2,27 +2,28 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h3 class="text-center">Registrar Doctores</h3>
+            <h3 class="text-center">Register Repertoires
+            </h3>
             <form action="<?php echo  site_url('Doctores/guardar'); ?>" id="frm_registrar_doctor" method="post">
 
-                <label for=""><b>Especialidad:</b></label>
+                <label for=""><b>CONCERT:</b></label>
                 <select name="especialidad_doc_ca" id="especialidad_doc_ca" class="form-control" required>
-                    <option value="">--SELECCIONE--</option>
-                    <option value="GENERAL">GENERAL</option>
-                    <option value="ODONTOLOGIA">ODONTOLOGIA</option>
-                    <option value="PEDIATRA">PEDIATRA</option>
+                    <option value="">--SELECT--</option>
+                    <option value="GENERAL">Cristian Fernando Almache Lema</option>
+                    <option value="ODONTOLOGIA">BONILLA</option>
+                    <option value="PEDIATRA">LUCAS</option>
                 </select>
 
                 
-                <label for=""><b>DNI:</b></label>
+                <label for=""><b>NUMBER:</b></label>
                 <input type="number" name="dni_doc_ca" id="dni_doc_ca"
-                placeholder="Ingrese su DNI" class="form-control"><br>
-                <label for=""><b>APELLIDO:</b></label>
+                placeholder="Enter your number" class="form-control"><br>
+                <label for=""><b>WORK NAME:</b></label>
                 <input type="text" name="apellido_doc_ca" id="apellido_doc_ca"
-                placeholder="Ingrese su primer apellido" class="form-control"><br>
-                <label for=""><b>NOMBRE:</b></label>
+                placeholder="Enter work name" class="form-control"><br>
+                <label for=""><b>LOCATION:</b></label>
                 <input type="text" name="nombre_doc_ca" id="nombre_doc_ca"
-                placeholder="Ingrese su primer nombre" class="form-control"><br>
+                placeholder="Enter the location" class="form-control"><br>
 
                 
                 <br>
@@ -32,21 +33,22 @@
             </form>
         </div>
         <div class="col-md-8">
-            <h3  class="text-center">Listado de Doctores</h3>
+            <h3  class="text-center">List of Repertoires
+            </h3>
             <br>
             <!--Boton ver direcciones-->
             <div class="col-md-4">
-            <a href="<?php echo site_url('Doctores/verDireccionesGenerales'); ?>" class="btn btn-primary float-right">Ver Direcciones Generales</a>
+     
             </div>
             <?php if($doctores): ?>
             <table class="table table-bordered table-striped table-hover" id ="tbl-doctores">
                 <thead>
                     <tr>
                         <th class="text-center">ID</th>
-                        <th class="text-center">ESPECIALIDAD</th>
-                        <th class="text-center">DNI</th>
-                        <th class="text-center">APELLIDO</th>
-                        <th class="text-center">NOMBRE</th>
+                        <th class="text-center">CONCERT</th>
+                        <th class="text-center">PHONE</th>
+                        <th class="text-center">WORK NAME</th>
+                        <th class="text-center">LOCATION</th>
                         <th class="text-center">ACCIONES</th>
                 
                     </tr>
