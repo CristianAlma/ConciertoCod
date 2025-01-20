@@ -13,29 +13,20 @@
                 <label for=""><b>CITY:</b></label>
                 <input type="text" name="ciudad_mat" id="ciudad_mat"
                 placeholder="Ingrese la ciudad" class="form-control"><br>
-                <label for=""><b>DIRECCIÓN:</b></label>
-                <input type="text" name="direccion_mat" id="direccion_mat"
-                placeholder="Ingrese la direccion" class="form-control"><br>
                 
 
-                <input type="text" name="latitud_mat" id="latitud_mat"
-                placeholder="Seleccione la ubicación en el mapa" class="form-control" readonly><br>
-                <input type="text" name="longitud_mat" id="longitud_mat"
-                placeholder="Seleccione la ubicación en el mapa" class="form-control" readonly><br>
-                <div id="mapa-direccion" style="border: 1px solid black; width:100%;height:250px"></div>
+               
                 <br>
-                <button class="btn btn-success" type="submit">GUARDAR</button>
+                <button class="btn btn-success" type="submit">SAVE</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-danger" type="reset">CANCELAR</button>
+                <button class="btn btn-danger" type="reset">CANCEL</button>
             </form>
         </div>
         <div class="col-md-8">
             <h3  class="text-center">Listado de Maternidades</h3>
             <br>
             <!--Boton ver direcciones-->
-            <div class="col-md-4">
-            <a href="<?php echo site_url('Maternidades/verDireccionesGenerales'); ?>" class="btn btn-primary float-right">Ver Direcciones Generales</a>
-            </div>
+            
             <br> <br>
             <?php if($maternidades): ?>
             <table class="table table-bordered table-striped table-hover" id ="tbl-clinicas">
@@ -57,7 +48,7 @@
                             <td class="text-center"><?php echo $maternidadTemporal->provincia_mat; ?></td>
                             <td class="text-center"><?php echo $maternidadTemporal->ciudad_mat; ?></td>
                             <td class="text-center">
-                            <a href="<?php echo site_url('Maternidades/graficarDireccion'); ?>/<?php echo $maternidadTemporal->id_mat; ?>" class="btn btn-primary" target="_blank">Ver Dirección</a>
+                            
                                 <a href="#" class="btn btn-warning">Editar</a>
                                 <a href="<?php echo site_url('Maternidades/eliminar'); ?>/<?php echo $maternidadTemporal->id_mat; ?>" class="btn btn-danger" onclick="return confirm('Esta seguro?');">Eliminar</a>
                             </td>
