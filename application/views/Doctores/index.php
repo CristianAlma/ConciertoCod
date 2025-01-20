@@ -2,8 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <h3 class="text-center">Register Repertoires
-            </h3>
+            <h3 class="text-center">Register Repertoires</h3>
             <form action="<?php echo  site_url('Doctores/guardar'); ?>" id="frm_registrar_doctor" method="post">
 
                 <label for=""><b>CONCERT:</b></label>
@@ -24,7 +23,6 @@
                 <label for=""><b>LOCATION:</b></label>
                 <input type="text" name="nombre_doc_ca" id="nombre_doc_ca"
                 placeholder="Enter the location" class="form-control"><br>
-
                 
                 <br>
                 <button class="btn btn-success" type="submit">SAVE</button>
